@@ -2,6 +2,7 @@
 
 cd "$(dirname "$0")/.."
 
+mkdir src
 git clone "{{GIT_REPO}}" "src"
 
 docker-compose up -d
