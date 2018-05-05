@@ -9,12 +9,8 @@ getUserInput() {
     echo $userInput
 }
 
-echo -n "[REQUIRED] Git repository URL: "
+echo -n "[OPTIONAL] Git repository URL: "
 gitRepo=$(getUserInput "")
-if [ -z "$gitRepo" ]; then
-    echo "ERROR: You must provide git repository URL!"
-    exit 1
-fi
 
 echo -n "[DEFAULT=MagentoProject] Project name: "
 projectName=$(getUserInput "MagentoProject")

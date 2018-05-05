@@ -3,7 +3,11 @@
 cd "$(dirname "$0")/.."
 
 mkdir src
-git clone "{{GIT_REPO}}" "src"
+
+GITREPO="{{GIT_REPO}}"
+if [ -n "$GITREPO" ]; then
+    git clone "" "src"
+fi
 
 docker-compose up -d
 
