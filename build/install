@@ -6,7 +6,7 @@ mkdir src
 
 GITREPO="{{GIT_REPO}}"
 if [ -n "$GITREPO" ]; then
-    git clone "" "src"
+    git clone "$GITREPO" "src"
 fi
 
 docker-compose up -d
