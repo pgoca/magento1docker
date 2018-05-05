@@ -9,5 +9,5 @@ RUN set -x && \
     mv ./n98-magerun.phar /usr/local/bin/n98-magerun
     
 RUN echo "" >> /usr/local/apache2/conf/httpd.conf && \
-  echo "Include /usr/local/apache2/conf/overwrite/*.conf" >> /usr/local/apache2/conf/httpd.conf && \
-  echo "Include /usr/local/apache2/conf/overwrite/*/*.conf" >> /usr/local/apache2/conf/httpd.conf
+  echo "Include /usr/local/apache2/conf/overwrite/httpd.conf" >> /usr/local/apache2/conf/httpd.conf && \
+  echo "Include /usr/local/apache2/conf/overwrite/sites-enabled/docker-vhost.conf" >> /usr/local/apache2/conf/httpd.conf

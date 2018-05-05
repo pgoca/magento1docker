@@ -8,7 +8,7 @@
     - global_mailhog
   volumes:
     - ./src:/var/www/app
-    - ./apache/conf/sites-enabled:/usr/local/apache2/conf/overwrite/sites-enabled
+    - ./apache/conf:/usr/local/apache2/conf/overwrite
   working_dir: "/var/www/app"
 
 {{PROJECT_NAME}}_php:
