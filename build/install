@@ -18,9 +18,11 @@ echo -e "Setting up file permissions"
 ./bin/exec php "setfacl -dR -m u:www-data:rwX /var/www/app"
 ./bin/exec php "setfacl -R -m u:www-data:rwX /var/www/app"
 
+echo -e "Creating database"
+./bin/exec db 'mysql -uroot -proot -e "CREATE DATABASE {{DATABASE_NAME}};"'
+
 if [ -n "{{DUMP_NAME}}" ]; then
     echo -e "Loading database dump"
-    ./bin/exec db 'mysql -uroot -proot -e "CREATE DATABASE {{DATABASE_NAME}};"'
     ./bin/exec db "mysql -uroot -proot {{DATABASE_NAME}} < /var/www/db/{{DUMP_NAME}}"
 fi
 
