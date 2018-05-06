@@ -12,4 +12,4 @@ RUN set -x && \
     mv ./n98-magerun.phar /usr/local/bin/n98-magerun
 
 RUN set -x && \
-    RUN docker-php-ext-install pdo_mysql
+    docker-php-ext-install pdo_mysql
